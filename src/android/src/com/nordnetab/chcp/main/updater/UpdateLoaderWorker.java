@@ -143,7 +143,7 @@ class UpdateLoaderWorker implements WorkerTask {
      * @param applicationConfigUrl url where our chcp lies
      * @return base url (without chcp.json)
      */
-    private String getBaseUrl(applicationConfigUrl) {
+    private String getBaseUrl(final String applicationConfigUrl) {
         return applicationConfigUrl.substring(0,applicationConfigUrl.lastIndexOf(PluginFilesStructure.CONFIG_FILE_NAME));
     }
 
