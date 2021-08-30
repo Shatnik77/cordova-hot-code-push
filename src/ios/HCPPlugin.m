@@ -110,7 +110,7 @@ static NSString *const DEFAULT_STARTING_PAGE = @"index.html";
         _pluginInternalPrefs.previousReleaseVersionName = @"";
         HCPApplicationConfig *config = [HCPApplicationConfig configFromBundle:[HCPFilesStructure defaultConfigFileName]];
         _pluginInternalPrefs.currentReleaseVersionName = config.contentConfig.releaseVersion;
-        
+        _filesStructure = [[HCPFilesStructure alloc] initWithReleaseVersion:_pluginInternalPrefs.currentReleaseVersionName];
         [_pluginInternalPrefs saveToUserDefaults];
     }
     
